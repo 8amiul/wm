@@ -76,6 +76,10 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 //static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+//For firefox dmenu
+static const char *firedmenu[] = {"firefoxdmenu", NULL};
+
+
 
 #include "shiftview.c"
 //static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
@@ -84,6 +88,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,	            XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = j4dmenucmd } },
+	{ MODKEY,                       XK_f,      spawn,          {.v = firedmenu } },
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
