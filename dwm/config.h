@@ -1,7 +1,7 @@
 /* SEE licENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel size of windows */
+static const unsigned int borderpx  = 3;        /* border pixel size of windows */
 static const unsigned int gappx     = 7;        /* gaps size between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
@@ -68,8 +68,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *dmenucmd[] = {"dmenu_run", NULL};
 static const char *j4dmenucmd[] = {"j4-dmenu-desktop", NULL};
-//launches htop
-static const char *monitor[] = { "/usr/bin/htop", NULL };
 //sets st as the default terminal
 static const char *termcmd[]  = { "st", NULL };
 //volume controls
