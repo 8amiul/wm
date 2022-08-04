@@ -7,8 +7,6 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-//static const char *fonts[]          = { "Cascadia Code:size=13" };
-//static const char dmenufont[]       = "Courier-Bold:size=23";
 static const char *fonts[]          = { "JetBrainsMono-Regular:size=13" };
 static const char dmenufont[]       = "JetBrainsMono-Regular:size=23";
 static char normbgcolor[]           = "#222222";
@@ -129,6 +127,14 @@ static Key keys[] = {
  	{ MODKEY|ShiftMask,             XK_F12,    quit,           {0} },
  	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
  	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
+	{ MODKEY,                       XK_Down,   moveresize,     {.v = "0x 25y 0w 0h" } },
+	{ MODKEY,                       XK_Up,     moveresize,     {.v = "0x -25y 0w 0h" } },
+	{ MODKEY,                       XK_Right,  moveresize,     {.v = "25x 0y 0w 0h" } },
+	{ MODKEY,                       XK_Left,   moveresize,     {.v = "-25x 0y 0w 0h" } },
+	{ MODKEY|ShiftMask,             XK_Down,   moveresize,     {.v = "0x 0y 0w 25h" } },
+	{ MODKEY|ShiftMask,             XK_Up,     moveresize,     {.v = "0x 0y 0w -25h" } },
+	{ MODKEY|ShiftMask,             XK_Right,  moveresize,     {.v = "0x 0y 25w 0h" } },
+	{ MODKEY|ShiftMask,             XK_Left,   moveresize,     {.v = "0x 0y -25w 0h" } },
 
 };
 
