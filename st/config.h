@@ -6,7 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "SourceCodePro-Bold:pixelsize=22:antialias=true:autohint=true";
-static char *font = "JetBrainsMono-Regular:pixelsize=22:antialias=true:autohint=true";
+//static char *font = "JetBrainsMono-Regular:pixelsize=22:antialias=true:autohint=true";
+static char *font = "Ubuntu Mono:pixelsize=22:antialias=true:autohint=true";
 static int borderpx = 30;
 
 /*
@@ -17,7 +18,7 @@ static int borderpx = 30;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
