@@ -28,7 +28,7 @@ static char *colors[][3] = {
 
 /* tagging */
 //tag names (upper left)
- static const char *tags[] = { "", "", "", "", "",  "", "", "", "" };
+ static const char *tags[] = { "", "", "", "", "",  "", "", "", "" };
  
  static const Rule rules[] = {
 	/* xprop(1):
@@ -79,6 +79,7 @@ static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute
 //static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 //For firefox dmenu
 static const char *firedmenu[] = {"firefoxdmenu", NULL};
+
 
 
 
@@ -140,7 +141,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Up,     moveresize,     {.v = "0x 0y 0w -25h" } },
 	{ MODKEY|ShiftMask,             XK_Right,  moveresize,     {.v = "0x 0y 25w 0h" } },
 	{ MODKEY|ShiftMask,             XK_Left,   moveresize,     {.v = "0x 0y -25w 0h" } },
-
 };
 
 /* button definitions */
