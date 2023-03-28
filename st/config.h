@@ -18,6 +18,9 @@ static char *font2[] = {
 	"Symbola:pixelsize=12:antialias=true:autohint=true"
 };
 
+/* bg opacity */
+float alpha = 0.8;
+
 
 /*
  * What program is execed by st depends of these precedence rules:

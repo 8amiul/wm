@@ -89,27 +89,29 @@ static const char *firedmenu[] = {"firefoxdmenu", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+// Some key binded programs.
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,	        	XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = j4dmenucmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = firedmenu } },
-
+// To show or hide the top bar.
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
-
+// Changing window focus.
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-
+// For vertical and horizontal split between windows.
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
-
+// Increasing or decreasing the size of a window.
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-
+// Making the primary window.
 	{ MODKEY,                       XK_z,	   zoom,           {0} },
+// Changing tag to the previously used tag.
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-
+// To quit a window or application
 	{ MODKEY,	                	XK_q,      killclient,     {0} },
-
+// To set window layout
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_v,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
